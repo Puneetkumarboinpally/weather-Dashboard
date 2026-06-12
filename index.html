@@ -4,45 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="card-container">
-      <h1 class="heading">Weather Dashboard</h1>
-
+    <div class="container">
+      <h1>Weather Dashboard</h1>
       <div class="search-container">
-        <input class="search-input" placeholder="Enter city..." />
+        <input
+          type="search"
+          class="search-input"
+          placeholder="Enter the City here...."
+        />
+        <button type="submit" class="search-btn">🔍</button>
+      </div>
+      <div class="card">
+        <!-- Js-content -->
+        <img src="" alt="" />
+        <h2 class="temperature">32°C</h2>
+        <p>London,Uk</p>
+        <p>sunny</p>
+        <p>overcast</p>
 
-        <button class="submitBtn">🔍</button>
+        <div class="readings">
+          <div class="cols">
+            <h3>78m/s</h3>
+            <p>Wind Flow</p>
+          </div>
+          <div class="cols">
+            <h3>52%</h3>
+            <p>Precipitation</p>
+          </div>
+          <div class="cols">
+            <h3>89%</h3>
+            <p>Humidity</p>
+          </div>
+        </div>
       </div>
 
-      <div class="weather-main">
-        <img class="weather-icon" />
-
-        <h2 class="city-name">Sheffield</h2>
-
-        <div class="temp"><span>18</span><small>°C</small></div>
-
-        <div class="condition">Clouds</div>
-      </div>
-
-      <div class="weather-readings">
-        <div class="cols">
-          <h2>65%</h2>
-          <p>Humidity</p>
-        </div>
-
-        <div class="cols">
-          <h2>12 km/h</h2>
-          <p>Wind</p>
-        </div>
-
-        <div class="cols">
-          <h2>1015</h2>
-          <p>Pressure</p>
-        </div>
-      </div>
+      <!-- history -->
     </div>
-    <script src="main.js"></script>
   </body>
 </html>

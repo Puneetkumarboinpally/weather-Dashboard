@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
@@ -18,11 +19,11 @@
       </div>
       <div class="card">
         <!-- Js-content -->
-        <img src="" alt="" />
-        <h2 class="temperature">32°C</h2>
-        <p>London,Uk</p>
-        <p>sunny</p>
-        <p>overcast</p>
+        <img class="weather-icon" src="" alt="" />
+        <h2 class="temperature">32<small>°c</small></h2>
+        <p class="city-name">London,Uk</p>
+        <p class="condition">sunny</p>
+        <p class="overcast">overcast cloudy</p>
 
         <div class="readings">
           <div class="cols">
@@ -42,5 +43,6 @@
 
       <!-- history -->
     </div>
+    <script src="main.js"></script>
   </body>
 </html>

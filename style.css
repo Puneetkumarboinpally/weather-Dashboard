@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 body {
-  background-color: rgb(102, 6, 102);
+  /* background-color: rgb(102, 6, 102); */
+   background-color: #e392f3;
   font-family: "poppins", sans-serif;
   display: flex;
   justify-content: center;
@@ -23,7 +24,7 @@ body {
   box-shadow: 2px 2px 20px rgb(0, 0, 0, 0.6);
 }
 h1 {
-  color: white;
+  color: black;
   font-weight: 700;
   letter-spacing: 0.1em;
   margin-bottom: 1rem;
@@ -41,7 +42,7 @@ h1 {
   background-color: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
-  color: white;
+  color: black;
   font-size: 1rem;
   font-weight: bold;
   transition: border-color 0.3s ease;
@@ -74,7 +75,7 @@ h1 {
 }
 .temperature {
   font-size: 4rem;
-  color: white;
+  color: black;
   font-weight: 500;
 }
 small {
@@ -84,14 +85,14 @@ small {
   font-size: 1.3rem;
   text-transform: uppercase;
   font-weight: 400;
-  color: white;
+  color: black;
   letter-spacing: 0.08em;
 }
 .condition {
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 300;
-  color: white;
+  color: black;
   padding: 2px 16px;
   letter-spacing: 0.08em;
   background-color: rgba(255, 255, 255, 0.1);
@@ -104,7 +105,7 @@ small {
   font-size: 1.4rem;
   text-transform: capitalize;
   font-weight: 400;
-  color: white;
+  color: black;
   margin-bottom: 1rem;
 }
 .readings {
@@ -123,4 +124,30 @@ small {
 }
 .cols p {
   color: rgb(225, 225, 225);
+}
+
+/* remove it */
+#search-history {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.history-chip {
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  background: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.history-chip:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.history-chip--clear {
+  border-color: #ff6b6b;
+  color: #ff6b6b;
 }

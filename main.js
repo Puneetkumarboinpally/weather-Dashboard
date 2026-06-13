@@ -5,7 +5,6 @@ const card = document.querySelector(".card");
 const apiKey = "ae62abc3e12453b9cfdba9073707eab5";
 
 async function getWeatherData(city) {
-  if (!city) return;
   card.innerHTML = `<h2>Loading...</h2>`;
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
@@ -15,7 +14,6 @@ async function getWeatherData(city) {
       throw new Error("City not found");
     }
     const data = await response.json();
-    console.log(data);
 
     const icon = data.weather[0].icon;
 
@@ -40,32 +38,23 @@ async function getWeatherData(city) {
             <p>Humidity</p>
           </div>
         </div>
-      </div>
 `;
   } catch (error) {
     card.innerHTML = `<h2>${error.message}</h2>`;
   }
 }
 
-searchBtn.addEventListener("click", () => {
+function cityData() {
   const city = searchInput.value.trim();
-  if (!city) {
-    alert("Please enter a city");
-    return;
-  }
   getWeatherData(city);
   searchInput.value = "";
+}
+
+searchBtn.addEventListener("click", () => {
+  cityData();
 });
 searchInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
-    const city = searchInput.value.trim();
-
-    if (!city) {
-      alert("Please enter a city");
-      return;
-    }
-    getWeatherData(city);
-    searchInput.value = "";
+    cityData();
   }
 });
-getWeatherData();

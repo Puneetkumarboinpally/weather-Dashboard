@@ -119,11 +119,8 @@ small {
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
 }
-.cols h3 {
-  color: rgb(245, 245, 245);
-}
-.cols p {
-  color: rgb(225, 225, 225);
+.cols h3, p {
+  color: black;
 }
 
 /* remove it */
